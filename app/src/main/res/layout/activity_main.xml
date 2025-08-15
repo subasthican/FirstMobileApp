@@ -1,34 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity" >
+    android:background="@drawable/sliit_background"
+    tools:context=".MainActivity">
+
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter the name" />
+        android:text="Welcome to SLIIT"
+        android:textSize="36sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
 
-    <TextView
-        android:id="@+id/textView2"
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="250dp"
+        android:layout_height="313dp"
+        android:layout_below="@id/txtWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sliit_logo"
+        android:background="@drawable/image_border"/>
+
+
+    <EditText
+        android:id="@+id/edtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter the password" />
+        android:layout_below="@id/imgLogo"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edittext_outer"
+        android:hint="Enter your name"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B3FFFFFF"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:inputType="textPersonName"/>
+
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:layout_below="@id/edtName"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:background="@drawable/button_rounded"
+        android:padding="12dp"
+        android:backgroundTint="#FF5722"/>
+
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register" />
-</LinearLayout>
+        android:layout_below="@id/btnSignUp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Sign In"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:background="@drawable/button_rounded"
+        android:padding="12dp"
+        android:backgroundTint="#009688"/>
+
+</RelativeLayout>
